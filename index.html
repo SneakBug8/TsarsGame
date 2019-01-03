@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://vuejs.org/js/vue.js"></script>
-        <script src="https://github.com/photonstorm/phaser/releases/download/v3.15.1/phaser.js"></script>
-        <script src="game.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        
-    </body>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main">
+            <div class="tsar" v-for="tsar in tsars">
+                <img :id="tsar.id" class="tsarimage" :src="tsar.portrait" @click="onclick(tsar.id)">
+            </div>
+        </div>
+        <div class="time">
+            Time elapsed: {{time}}
+        </div>
+        <div v-if="tsardata" class="tsardata">
+            {{tsardata}}
+        </div>
+    </div>
+</body>
+<script src="game.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </html>
