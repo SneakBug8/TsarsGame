@@ -8,19 +8,46 @@ var app = new Vue({
             },
             {
                 id: 1,
-                portrait: "https://ck2.paradoxwikis.com/images/b/b0/Map_kingdoms.PNG",
+                portrait: "https://ck2.paradoxwikis.com/images/5/5f/Map_empires.PNG",
             }
         ],
-        time: 0,
+        seconds: 0,
         tsardata: null,
+        answers: [0,1],
+        subtitles: ["None", "No"]
     },
     methods: {
         onclick: function(id) {
-            alert(id);
+            if (id == this.answers[0]) {
+                this.answers = _.drop(this.answers);
+                this.tsars = _.filter(this.tsars, (tsar) => tsar.id != id);
+                this.tsardata = this.subtitles[0];
+                this.subtitles = _.drop(this.subtitles);
+            }
+            else {
+                const strings = ["No, you're wrong", "DU HAST MICH"];
+                this.tsardata = strings[Math.floor(Math.random() * strings.length)];
+            }
+        }
+    },
+    computed: {
+        time: function() {
+            let time = this.seconds;
+            let res = "";
+            if (time > 60 * 60) {
+                res += Math.floor(time / (60 * 60)) + "h ";
+                time = time % (60 * 60);
+            }
+            if (time > 60) {
+                res += Math.floor(time / 60) + "m ";
+                time = time % 60;
+            }
+            res += time + "s";
+            return res;
         }
     }
 })
 
 setInterval(() => {
-    app.time += 1
+    app.seconds += 1
 }, 1000);

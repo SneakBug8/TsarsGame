@@ -11,19 +11,31 @@ body {
     width: 80%;
     margin: auto;
     overflow: hidden;
-    padding: 5px;
+    padding: 0 10px 10px 10px;
+}
+
+#app,
+.tsar,
+.header {
+    border-bottom: 3px solid gray;
+    border-radius: 5px;
 }
 
 .main {
     display: flex;
+    min-height: 110px;
 }
 
 .tsar {
     width: 100px;
     height: 100px;
-    margin: 5px;
-    border: 1px solid black;
-    padding: 5px;
+    margin: 10px;
+}
+
+.tsar:hover {
+    margin: 8px;
+    border: 2px solid gray;
+    border-bottom: 3px solid gray;
 }
 
 .tsarimage {
@@ -32,11 +44,76 @@ body {
 }
 
 @media (min-width: 800px) {
+
     .time,
     .tsardata {
         display: block;
         width: 50%;
-        height: 100px;
+        height: 20px;
         float: left;
+        margin-top: 30px;
     }
+}
+
+@media (max-width: 800px) {
+    .time {
+        margin-top: 30px;
+    }
+
+    .time,
+    .tsardata {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.header {
+    display: block;
+    position: relative;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    background-color: rgb(114, 170, 170);
+    margin: 0 -10px 10px -10px;
+    color: white;
+    border-radius: 0;
+}
+
+.header h1,
+.header a {
+    display: block;
+    margin: 5px;
+}
+
+h1,
+a {
+    font-size: 24pt;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 18pt;
+}
+
+.footer {
+    display: block;
+    width: 200px;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.footer a {
+    font-size: 14px;
+    color: rgb(185, 185, 185);
 }
