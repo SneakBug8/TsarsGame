@@ -7,13 +7,13 @@ var app = new Vue({
             {
                 id: 0,
                 portrait: baseurl + "images/michael.jpg",
-                alt: "Michael I",
+                title: "Michael I",
                 subtitle: "Michael I was the first Tsar from Romanov house, elected after the end of Time of Troubles. Rulership: 26 July 1613 - 12 July 1645"
             },
             {
                 id: 1,
                 portrait: baseurl + "images/300.png",
-                alt: "None",
+                title: "None",
                 subtitle: "None"
             }
         ],

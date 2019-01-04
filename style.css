@@ -28,7 +28,7 @@ body {
 
 .tsar {
     position: relative;
-    width: 100px;
+    width: auto;
     height: 100px;
     margin: 10px;
 }
@@ -40,12 +40,8 @@ body {
 }
 
 .tsarimage {
-    position: absolute;
-    left: 50%;
-    top: 50%;
     height: 100%;
     width: auto;
-    transform: translate(-50%, -50%);
 }
 
 @media (min-width: 800px) {
