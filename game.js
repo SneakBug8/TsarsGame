@@ -28,6 +28,10 @@ var app = new Vue({
                 const strings = ["No, you're wrong", "DU HAST MICH"];
                 this.tsardata = strings[Math.floor(Math.random() * strings.length)];
             }
+
+            if (!this.answers.length) {
+                clearInterval(timer);
+            }
         }
     },
     computed: {
@@ -48,6 +52,6 @@ var app = new Vue({
     }
 })
 
-setInterval(() => {
+var timer = setInterval(() => {
     app.seconds += 1
 }, 1000);
