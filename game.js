@@ -1,32 +1,36 @@
+const baseurl = "/";
+
 var app = new Vue({
     el: "#app",
     data: {
         tsars: [
             {
                 id: 0,
-                portrait: "https://via.placeholder.com/300",
+                portrait: baseurl + "images/michael.jpg",
+                alt: "Michael I",
+                subtitle: "Michael I was the first Tsar from Romanov house, elected after the end of Time of Troubles. Rulership: 26 July 1613 - 12 July 1645"
             },
             {
                 id: 1,
-                portrait: "https://via.placeholder.com/400",
+                portrait: baseurl + "images/300.png",
+                alt: "None",
+                subtitle: "None"
             }
         ],
         seconds: 0,
         tsardata: null,
         answers: [0,1],
-        subtitles: ["None", "No"]
     },
     methods: {
         onclick: function(id) {
             if (id == this.answers[0]) {
                 this.answers = _.drop(this.answers);
+                this.tsardata = _.filter(this.tsars, (tsar) => tsar.id == id)[0].subtitle;
                 this.tsars = _.filter(this.tsars, (tsar) => tsar.id != id);
-                this.tsardata = this.subtitles[0];
-                this.subtitles = _.drop(this.subtitles);
             }
             else {
-                const strings = ["No, you're wrong", "DU HAST MICH"];
-                this.tsardata = strings[Math.floor(Math.random() * strings.length)];
+                const wrongstrings = ["No, you're wrong", "That's not right"];
+                this.tsardata = wrongstrings[Math.floor(Math.random() * wrongstrings.length)];
             }
 
             if (!this.answers.length) {

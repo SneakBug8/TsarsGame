@@ -16,7 +16,7 @@
         </div>
         <div class="main">
             <div class="tsar" v-for="tsar in tsars">
-                <img :id="tsar.id" class="tsarimage" :src="tsar.portrait" @click="onclick(tsar.id)">
+                <img :id="tsar.id" class="tsarimage" :src="tsar.portrait" @click="onclick(tsar.id)" :alt="tsar.alt">
             </div>
         </div>
         <div class="bottom">
