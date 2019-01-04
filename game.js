@@ -4,11 +4,11 @@ var app = new Vue({
         tsars: [
             {
                 id: 0,
-                portrait: "https://ck2.paradoxwikis.com/images/b/b0/Map_kingdoms.PNG",
+                portrait: "https://via.placeholder.com/300",
             },
             {
                 id: 1,
-                portrait: "https://ck2.paradoxwikis.com/images/5/5f/Map_empires.PNG",
+                portrait: "https://via.placeholder.com/400",
             }
         ],
         seconds: 0,

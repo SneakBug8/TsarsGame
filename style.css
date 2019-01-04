@@ -1,23 +1,23 @@
 body {
     box-sizing: border-box;
-    background-color: rgb(215, 243, 243);
+    background-color: #9bc1bc;
     font-family: 'Open Sans', sans-serif;
 }
 
 #app {
     display: block;
-    background-color: white;
+    background-color: #e6ebe0;
     height: auto;
     width: 80%;
+    max-width: 800px;
     margin: auto;
     overflow: hidden;
     padding: 0 10px 10px 10px;
 }
 
 #app,
-.tsar,
-.header {
-    border-bottom: 3px solid gray;
+.tsar{
+    border-bottom: 3px solid #5ca4a9;
     border-radius: 5px;
 }
 
@@ -34,8 +34,8 @@ body {
 
 .tsar:hover {
     margin: 8px;
-    border: 2px solid gray;
-    border-bottom: 3px solid gray;
+    border: 2px solid #5ca4a9;
+    border-bottom: 3px solid #5ca4a9;
 }
 
 .tsarimage {
@@ -74,10 +74,10 @@ body {
     height: auto;
     width: auto;
     overflow: hidden;
-    background-color: rgb(114, 170, 170);
+    background-color: #ed6a5a;
     margin: 0 -10px 10px -10px;
     color: white;
-    border-radius: 0;
+    border-bottom: 3px solid #c75749;
 }
 
 .header h1,
@@ -110,10 +110,9 @@ a:hover {
     width: 200px;
     margin: auto;
     margin-top: 20px;
-
 }
 
 .footer a {
     font-size: 14px;
-    color: rgb(185, 185, 185);
+    color: #ed6a5a;
 }
